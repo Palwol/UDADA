@@ -1,0 +1,20 @@
+
+class Student {
+	String name;
+	String rollno;
+	int age;
+	
+	public Student(String name, String rollno, int age) {
+		name = "Kim";
+		rollno = "20180001";
+		age = 20;
+}
+
+public class StudentTest {
+	public static void main(String args[]) {
+		
+		Student obj = new Student();
+		
+		System.out.println(obj);
+		
+	}

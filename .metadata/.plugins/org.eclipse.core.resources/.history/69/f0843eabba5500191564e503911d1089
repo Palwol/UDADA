@@ -1,0 +1,34 @@
+
+class Account {
+	int balance;
+	
+	public Account() {
+		balance = 0;
+		System.out.println("새로운 계좌가 만들어졌습니다.");
+	}
+	
+	void withdraw(int amount) {
+		balance -= amount;
+		System.out.println(amount  + "원 인출");
+	}
+	
+	void deposit(int amount) {
+		balance += amount;
+		System.out.println(amount + "원 저축");
+	}
+}
+
+public class AccountTest {
+	public static void main(String args[]) {
+		
+		Account obj1 = new Account();
+		obj1.deposit(50000);
+		
+		Account obj2 = new Account();
+		obj2.deposit(100000);
+		
+		System.out.println("고객 #1의 계좌 잔고=" + obj1.balance);
+		System.out.println("고객 #2의 계좌 잔고=" + obj2.balance);
+	}
+
+}

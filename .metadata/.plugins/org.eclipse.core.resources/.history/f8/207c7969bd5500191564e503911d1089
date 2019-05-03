@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+class MyMetric {
+	double kilo;
+	
+	public static double kiloToMile(double kilo) {
+		double mile = kilo/1.6093;
+		return mile;
+	}
+}
+public class MyMetricTest {
+	public static void main(String arts[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("거리를 km로 입력하시오:");
+		double distance = sc.nextDouble();
+		
+		System.out.println(distance + "km를 마일로 바꾸면 " + MyMetric.kiloToMile(distance));
+	}
+
+}
