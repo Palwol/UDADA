@@ -1,22 +1,21 @@
 import java.util.*;
+import java.io.*;
 public class EditerTest {
 
-	public static void main(String[] args) {
-		long start = System.currentTimeMillis();
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Character> left = new Stack<Character>();
 		Stack<Character> right = new Stack<Character>();
 		
-		String words = sc.nextLine();
+		String words = rd.readLine();
 		for(int i=0; i<words.length(); i++) {
 			left.push(words.charAt(i));
 		}
 		
-		int n = sc.nextInt();
-		sc.nextLine();
+		int n = Integer.parseInt(rd.readLine());
 		
 		while(n-- >0) {
-			String cmd = sc.nextLine();
+			String cmd = rd.readLine();
 			if(cmd.equals("L")) {
 				if(!left.empty()) {
 					right.push(left.pop());
@@ -42,8 +41,7 @@ public class EditerTest {
 		while(!right.empty()) {
 			System.out.print(right.pop());
 		}
-		long end = System.currentTimeMillis();
-		System.out.println( "실행 시간 : " + (end-start)/1000.0 +"초");
+
 	}
 	
 }
